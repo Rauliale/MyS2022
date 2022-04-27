@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    
+    <!--<script src="./metodos/obtenerValores.js"></script>-->
+
+    <!-- Importamos los scripts de los metodoos -->
+    <script src="./metodo/vonNeuman.js"></script>
+    <script src="./metodo/congruenciaMultiplicativo.js"></script>
+    <script src="./metodo/separarNumeros.js"></script>
+    <script src="./metodo/separarNumerosDosCifras.js"></script>
+
+    <!-- Importamos los scripts de los test de aleatoriedad -->
+    <script src="./testAleatoriedad/chiCuadrado.js"></script>
+    <script src="./testAleatoriedad/racha.js"></script>
+    <script src="./testAleatoriedad/verificarChi.js"></script>
+
+    <title>generador de numeros</title>
+</head>
+<body>
+    <div class="conteiner" style="background-color:antiquewhite;">
+        <div class="card">
+          <div class="card-header">
+            <h3>Metodo Von Neumann</h3>
+            
+          </div>
+            <form action="#">
+                <div class="card-body">
+                    
+                        <div class="row">
+                            <div class="col-6 form-grup" >
+                                <label for=""  class=" col-form-label text-md-right">semilla</label>
+                                <input type="number" class="form-control"  id="n1" name="n1">
+                            </div>
+                            <div class="col-6 form-grup" >
+                                <label for=""  class=" col-form-label text-md-right">n</label>
+                                <input type="number" class="form-control" id="n2" name="n2">
+                            </div>
+                        </div>
+                    
+
+                </div>
+
+            
+                <button type="button" class="btn btn-primary d-block mx-auto" onclick="obtenerValoresVN()">generar</button>
+            
+            </form>
+        </div>
+        <div class="card">
+            <div class="card-header">
+              <h3>Metodo Congruencia</h3>
+              
+            </div>
+              <form action="#">
+                  <div class="card-body">
+                      
+                          <div class="row">
+                              <div class="col-3 form-grup" >
+                                  <label for=""  class=" col-form-label text-md-right">s</label>
+                                  <input type="number" class="form-control"  id="s" name="s">
+                              </div>
+                              <div class="col-3 form-grup" >
+                                  <label for=""  class=" col-form-label text-md-right">n</label>
+                                  <input type="number" class="form-control" id="n" name="n">
+                              </div>
+                              <div class="col-3 form-grup" >
+                                <label for=""  class=" col-form-label text-md-right">a</label>
+                                <input type="number" class="form-control" id="a" name="a">
+                              </div>
+                              <div class="col-3 form-grup" >
+                                <label for=""  class=" col-form-label text-md-right">m</label>
+                                <input type="number" class="form-control" id="m" name="m">
+                              </div>
+                          </div>
+                      
+  
+                  </div>
+  
+              
+                  <button type="button" class="btn btn-primary d-block mx-auto" onclick="obtenerValoresCM()">generar</button>
+              
+              </form>
+          </div>
+    </div>
+
+
+    <div class="card bg-light mb-3 " id="cardResultadoCongruencia" style="display: none; background-color: antiquewhite;"  >
+        <div class="card-header bg-info text-white">Resultado Metodo congruencia</div>
+
+        <div class="card-body">
+            <table id="tablaCongruencia" class="table table-striped table-bordered table-dark ">
+                <thead class="table-info text-center black white-text">
+                    <td>
+                        Iteración
+                    </td>
+                    <td>
+                        X<sub>n</sub>
+                    </td>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div> 
+     
+    <div class="card bg-light mb-3 " id="cardResultadoVon" style=" background-color: antiquewhite;"  >
+        <div class="card-header bg-info text-white">Resultado Metodo Von Neumann</div>
+      <div class="card-body">
+        <table id="tablaVonNeumann" class="table table-striped table-bordered">
+            <thead class="table-info text-center">
+                <td>
+                    Iteración
+                </td>
+                <td>
+                    X<sub>n</sub>
+                </td>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+</html>
